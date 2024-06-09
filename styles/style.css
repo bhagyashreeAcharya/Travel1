@@ -1,0 +1,150 @@
+body{
+    background: #A39171;
+    color: #FFF8E7;
+    text-align: center;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,h3,p{
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+#hdr{
+    min-height: 220px;
+    padding-top: 3em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    color: white;
+}
+
+
+img{
+    width: 100%;
+    max-height: 300px;
+}
+
+.dest{
+    background: #7C6C54;}
+
+.dest{
+    width: 40%;
+    display: inline-block;
+}
+
+.dest a{
+    color: inherit;  /*this will inherit color from parent class dest*/
+    text-decoration: none;
+    transition: opacity 0.3s; /*Add transition for smooth effect*/
+}
+
+.dest a:hover{
+    opacity: 0.8;
+}
+
+.btn{
+    text-decoration: none;
+    color: #FFF8E7;
+    padding: 1em 2em;
+    background: #7C6C54;
+    border: 1px solid #D2B48C ;
+    display: inline-block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+
+.btn:hover{
+    background: #BFAC95;
+
+}
+
+.hdr-bg{
+    background: url('../images/download.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 260px;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3;
+    margin: 0;
+    
+}
+
+footer{
+    min-height: 50px;
+    background: #FEFEE3;
+    color: black;
+    line-height: 50px;
+}
+
+.contact{
+    background: #362624;
+    min-height: 100px;
+}
+
+.prices{
+    background: #7B3F00;
+    min-height: 100px;
+}
+
+section{
+    padding-bottom: 1.5em;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.applet-container{
+    background-color: #A39171 ;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);;
+}
+
+.applet-div{
+    background-color: orange;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.section-heading{
+    color: green;
+}
+
+.poem-title{
+    color: #87255B;
+}
+
+.keyword-magnet{
+    display: inline-block;
+    padding: 4px 8px;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.poetry-body {
+    font-size: 1.2em; /* Increase the font size */
+    line-height: 1.5; /* Add space between lines */
+    /* Add any other desired styles */
+}
+
+/* Style for WhatsApp and social media icons */
+.contact a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease-in-out; /* Adding a smooth transition effect */
+}
+
+/* Hover effect: Scale up the icons on hover */
+.contact a:hover img {
+    transform: scale(1.1); /* Scale the icon to 110% on hover */
+}
