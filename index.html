@@ -1,0 +1,250 @@
+<!-- Task 4 : Starting to style the page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Travel Agency</title>
+</head>
+<body>
+ <div class="hdr-bg"></div>
+    <header id="hdr">
+
+        <div class="content-wrap">
+            <h1>Welcome to our Travel Agency</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate recusandae temporibus aliquam totam laborum. Quidem reprehenderit quas id cumque doloremque.
+
+            </p>
+             <!--If we want to write random text we can write lorem20 (it will write 20 words paraghraph)  -->
+        </div>
+    </header>
+
+    <section class="destinations">
+        <div class="content-wrap" >
+            <h2>Our Destinations</h2>
+          <div class="dest">
+            <a href="https://www.makemytrip.com/holidays-international/paris-vacation-tour-packages.html" target="_blank">
+                <h3>Paris</h3>
+                <img src="images/paris.jpg">
+                <div class="dest-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque incidunt quas nemo, quo minus minima ab expedita ea soluta ut?
+                </div>
+            </a>
+            </div>
+            <div class="dest">
+
+            <a href="https://www.makemytrip.com/holidays-international/london-vacation-tour-packages.html" target="_blank">
+                <h3>London</h3>
+                <img src="images/london.jpg" >
+                <div class="dest-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque incidunt quas nemo, quo minus minima ab expedita ea soluta ut?
+                </div>
+            </a>
+            </div>
+        </div>
+        <a href="#contact" class="btn" >Contact Us  </a>
+    </section>
+
+    <section class="prices">
+        <div class="content-wrap">
+            <h2>Our prices</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam cum illum nemo, mollitia delectus quam officia ratione numquam iusto soluta. Quam, corrupti quia dignissimos animi possimus quae. Asperiores nihil, veritatis sit, atque voluptatem enim repudiandae quos repellat hic vitae sunt!</p>
+            
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="content-wrap" >
+          <h2>Contact us</h2>
+          <p>Email: ourcompany@domain.com</p>
+          <p>WhatsApp: <a href="https://wa.me/918208925071" target="_blank"><img src="./images/what1.png" alt="WhatsApp Icon"></a></p>
+        <p>Follow us on:</p>
+        <p>
+            <a href="https://www.facebook.com/travelentries" target="_blank"><img src="./images/face1.png" alt="Facebook Icon"></a>
+            <a href="https://www.instagram.com/thetripperstours" target="_blank"><img src="./images/insta1.jpg" alt="Instagram Icon"></a>
+        </p>
+        </div>
+    </section>
+
+<div class="container">
+  <div class="applet-container">
+    <div class="applet-div">
+        <h1 class="section-heading"> Take a break and Experience the Emotions!</h1>
+        <form id="query-form">
+            <div>
+                <label for="place">Enter the name of the place: </label><input class="textfield" id="place" type="text" name="place" placeholder="e.g. Paris">
+            </div>
+
+            <div>
+                <label for="food">Enter the Name of Food:</label><input class="textfield" id="food" type="text" name="food" placeholder="e.g Croissant">
+            </div>
+            <div class="button">
+                <div class="poetry-title" id="poetry-title"></div>
+                <div class="poetry-body" id="poetry-body"></div>
+
+            <!-- <input class="btn btn-warning" type="button" value="Reset" id="resetButton" onclick="this.form.reset(); resetresults()"> -->
+            <input class="btn btn-warning" type="button" value="Reset" id="resetButton">
+
+            <input class="btn btn-primary" type="submit" value="Make/Remake" id="makeButton">
+
+            <div class="poetry-form-message" id="form-message"></div>
+            </div>
+        </form>
+
+        <p data-toggle="tooltip" data-placement="bottom" title="" onclick="javascript:toolTipReset()" data-original-title="These tags tell you what technologies I use">
+         Powered by :
+        <span class="keyword-magnet">JavaScript</span>
+        <span class="keyword-magnet">JQuery</span>
+        <span class="keyword-magnet">Bootstrap</span>
+        </p>
+    </div>
+  </div>
+</div>
+
+    <footer>
+        All copyrights reserved
+    </footer>
+
+    <script>
+document.addEventListener("DOMContentLoaded",function(){
+    var contactbtn = document.querySelector(".btn");
+    contactbtn.addEventListener("click", function(event){
+      event.preventDefault();
+      var contactsection = document.getElementById("contact");
+      
+      contactsection.scrollIntoView({behavior:"smooth"});
+    });
+});
+ </script>
+
+<script>
+    const templates = {
+        title: (place, food) =>`<h2 class="poem-title">Savoring ${food} in ${place}</h2>`,  
+        stanzas: [
+        [
+        `So let us wander, through $place's bustling streets,`,
+        `Discovering <span class="highlight">$food</span> delights, where every taste meets.`,
+        `In every corner cafe, a new tale to unfold,`,
+        `Savoring $food in $place, a journey worth gold.`
+    ],
+    [
+        `As we roam the streets of $place,`,
+        `Sampling <span class="highlight">$food</span> at every pace.`,
+        `In the ambiance of each quaint cafe,`,
+        `Memories of flavors forever to stay.`
+    ],
+    [
+        `Down the alleys of $place we roam,`,
+        `Exploring <span class="highlight">$food</span> from home to dome.`,
+        `In the aroma of spices, a story untold,`,
+        `Savoring $food in $place, a tale of old.`
+    ],
+    [
+        `Through the markets of $place, we weave,`,
+        `Tasting <span class="highlight">$food</span>, each bite a reprieve.`,
+        `In the chatter of locals, a rhythm so bold,`,
+        `Savoring $food in $place, a treasure to hold.`
+    ],
+    [
+        `Amidst the bustle of $place, we find,`,
+        `Flavors of <span class="highlight">$food</span>, unique to its kind.`,
+        `In the heart of the city, stories unfold,`,
+        `Savoring $food in $place, memories untold.`
+    ],
+    [
+        `Along the streets of $place, we stroll,`,
+        `Tasting <span class="highlight">$food</span>, each morsel a goal.`,
+        `In the blend of cultures, tales untold,`,
+        `Savoring $food in $place, a journey of gold.`
+    ],
+    [
+        `Through the lanes of $place, we tread,`,
+        `Indulging in <span class="highlight">$food</span>, every bite a thread.`,
+        `In the diversity of flavors, stories unfold,`,
+        `Savoring $food in $place, memories we hold.`
+    ],
+    [
+        `In the heart of $place, we immerse,`,
+        `Savoring <span class="highlight">$food</span>, each taste a verse.`,
+        `In the rhythm of the city, tales untold,`,
+        `Savoring $food in $place, a journey so bold.`
+    ],
+    [
+        `Through the flavors of $place, we wander,`,
+        `Tasting <span class="highlight">$food</span>, each dish a wonder.`,
+        `In the mosaic of cultures, stories unfold,`,
+        `Savoring $food in $place, a memory to hold.`
+    ],
+    [
+        `Down the lanes of $place, we roam,`,
+        `Sampling <span class="highlight">$food</span>, each taste a poem.`,
+        `In the tapestry of flavors, tales untold,`,
+        `Savoring $food in $place, memories of old.`
+    ]
+
+        ]
+    };
+
+    function makePoem(event) {
+        event.preventDefault(); // Prevent form submission
+        if (!validateInput()) return;
+
+        // Get input values
+        const place = document.getElementById('place').value;
+        const food = document.getElementById('food').value;
+
+        // Generate a random poetic template
+        const randomIndex = Math.floor(Math.random() * templates.stanzas.length);
+        const stanza = templates.stanzas[randomIndex];
+
+        // Replace placeholders in the template with input values
+        let poem = '';
+        stanza.forEach(line => {
+        // Apply different colors to place and food
+        const styledLine = line.replace('$place', `<span style="color: #776D5A;">${place}</span>`)
+                                .replace('$food', `<span style="color: #B7245C;">${food}</span>`);
+        poem += styledLine + '<br>'; 
+        });
+
+        // Display the poem
+        document.getElementById('poetry-title').innerHTML = templates.title(place, food);
+        document.getElementById('poetry-body').innerHTML = poem;
+    }
+
+    function validateInput() {
+        // Validate input fields (e.g., check if they are not empty)
+        // Return true if inputs are valid, false otherwise
+        const placeInput = document.getElementById('place').value.trim();
+        const foodInput = document.getElementById('food').value.trim();
+
+        // Check if input fields are not empty
+        if (!placeInput || !foodInput) {
+            alert('Please fill in both the place and food fields.');
+            return false;
+        }
+
+        return true;
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('resetButton').addEventListener('click', resetResults);
+});
+
+    function resetResults() {
+        // Reset the form and clear any displayed results
+    //     document.getElementById('query-form').reset();
+    //     document.getElementById('poetry-body').innerHTML = '';
+    document.getElementById('query-form').reset();
+    document.getElementById('poetry-title').innerHTML = ''; // Clear the title
+    document.getElementById('poetry-body').innerHTML = '';
+
+    }
+
+    // Add event listener to the form submit button
+    document.getElementById('query-form').addEventListener('submit', makePoem);
+</script>
+
+</body>
+</html>
